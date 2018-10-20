@@ -1,9 +1,5 @@
-import test from './test';
+document.addEventListener("DOMContentLoaded", function(event) { 
+	alert("Test");
+	console.log("tesT")
 
-const test1 = ()=>{
-	console.log("tesT",test);
-
-}
-
-
-test()
+});
