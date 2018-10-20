@@ -11,6 +11,6 @@ gulp.task("default", function () {
 		.require("./src/app.js", { entry: true })
 		.bundle()
 		.on("error", function (err) { console.log("Error: " + err.message); })
-		.pipe(fs.createWriteStream("bundle.js"));
+		.pipe(fs.createWriteStream("dist/js/bundle.js"));
 
 });
