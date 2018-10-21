@@ -10,7 +10,7 @@ export default class Index{
 		this.componentDidMount()
 			.then(()=>{
 				const template  = this.render();
-
+				this.loadChildViews();
 				this.insertElement(template);
 			})
 	}
@@ -45,10 +45,25 @@ export default class Index{
 		return '';
 
 	}
-
+	childViews(){
+		return [];
+		
+	}
 	componentSelector(){
 		return [...document.querySelectorAll(`[data-component="${this.component}"]`)];
 	}
 
+	/**
+	 * loading listed child views
+	 */
+	loadChildViews(){
+		if(!Array.isArray(this.childViews() )){
+			return false;
+		}
 
+		this.childViews().forEach(view=>{
+			let className = view.prototype.constructor.name;
+			new view(`${className}`);
+		})
+	}
 }
