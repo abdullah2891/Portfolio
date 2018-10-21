@@ -10,7 +10,6 @@ export default class App extends Index{
 	render(){
 		return `<div>
 			<div>app</div>
-
 			<div data-component="MainPage"></div>
 			
 		</div>`;
