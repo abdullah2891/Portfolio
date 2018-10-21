@@ -8,7 +8,7 @@ var babelify = require("babelify");
 gulp.task("browserify", function () {
 	browserify({ debug: true })
 		.transform(babelify)
-		.require("./src/app.js", { entry: true })
+		.require("./src/index.js", { entry: true })
 		.bundle()
 		.on("error", function (err) { console.log("Error: " + err.message); })
 		.pipe(fs.createWriteStream("dist/js/bundle.js"));
@@ -16,5 +16,5 @@ gulp.task("browserify", function () {
 
 
 gulp.task('serve', function(){
-	gulp.watch('src/*.js',['browserify'])
+	gulp.watch('src/**/*.js',['browserify'])
 })
