@@ -27,5 +27,5 @@ console.log("starting sass compiler")
 
 gulp.task('serve', function(){
 	gulp.watch('src/**/*.js',['browserify'])
-	gulp.watch('src/sass/**/*.scss', ['sass']);
+	gulp.watch('src/scss/**/*.scss', ['sass']);
 })

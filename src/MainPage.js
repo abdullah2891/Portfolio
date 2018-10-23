@@ -6,9 +6,13 @@ export default class MainPage extends Index{
 
 	render(){
 		return `
-			<div>
-				<p>Main Page</p>
+			<div class="introduction">
+				<p class="title">Hi</p>
+				<p>Welcome to this corner of the internet</p>
 
+				<p> How can I help you today</p>
+				<p> How can I help you today</p>
+				<p> How can I help you today</p>
 			</div>
 
 		`;

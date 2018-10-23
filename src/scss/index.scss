@@ -1,3 +1,111 @@
 body{
-        background : #5DBCD2;
+
+	.side-footer{
+		writing-mode: vertical-rl;
+		text-orientation: mixed;
+		font-size: 30px;
+		padding-top : 10vh;
+		padding-left : 125px;
+		text-transform:uppercase;		
+		min-height : 90vh;
+	}
+
+	.project-text:after{
+		content : '';
+		width : 5px;
+		height : 90vh;
+		background : black;
+		position : absolute;
+		left : 50%;
+		top : 16px;
+	}
+
+
+	.contact-footer:after{
+		content : '';
+		width : 5px;
+		height : 90vh;
+		background : black;
+		position : absolute;
+		left : 36%;
+		top : 26px;
+
+	}
+
+
+	.first-page{
+		.navigation{
+			li {
+				font-size : 30px;
+				text-transform : uppercase;
+				list-style : none;	
+				padding-top : 10vh;
+			}
+			li:hover{
+				border-bottom: 2px solid #F117B4;
+				font-weight :  thick;
+				cursor : pointer;
+			}
+		}
+
+		.main-page{
+			padding-top : 10vh;
+			padding-left : 30vh;
+			padding-bottom : 10vh;
+			padding-right: 10vh;
+			min-height : 90vh;
+			border-right : solid 5px;
+
+
+			.introduction{
+				text-transform : uppercase;
+				.title{
+					font-size :4em;
+				}
+				font-size : 30px;
+
+			}
+		}
+	}
+	.first-page:after{
+		content : '';
+		width:90vw;
+		margin-left: 5vw;
+		height:4px;
+		background:black;
+		position:relative;;
+		bottom:-10px;
+	}
+	
+	.second-page:after{
+		content : '';
+		width:90vw;
+		margin-left: 5vw;
+		height:4px;
+		background:black;
+		position:relative;;
+		bottom:-21px;
+	}
+
+	.second-page{
+		.project-description{
+			padding-top : 13vh;
+		}
+		
+	}
+
+	.third-page{
+		.contact{
+			padding:30vh;
+			.custom-input{
+				border-top : none;
+				border-left : none;
+				border-right : none;
+				border-bottom : solid;
+				margin-left : 14px;
+			}
+		}
+
+	}
+	
 }
