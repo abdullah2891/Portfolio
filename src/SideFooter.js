@@ -5,7 +5,7 @@ export default class SideFooter extends Index{
 
 	render(){
 		return `
-			<div class="project-text side-footer">Project</div>
+			<div id="projectText" class="project-text  side-footer">Project</div>
 		`;
 
 	}
