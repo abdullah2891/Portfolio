@@ -4,6 +4,8 @@ var browserify = require("browserify");
 var babelify = require("babelify");
 var sass = require('gulp-sass');
 var htmlmin  = require('gulp-htmlmin');
+var source = require('vinyl-source-stream');
+
 
 sass.compiler = require('node-sass');
 
@@ -14,7 +16,8 @@ gulp.task("browserify", function () {
 		.require("./src/index.js", { entry: true })
 		.bundle()
 		.on("error", function (err) { console.log("Error: " + err.message); })
-		.pipe(fs.createWriteStream("dist/js/bundle.js"));
+		.pipe(source('bundle.js'))
+		.pipe(gulp.dest('dist/js'));
 });
 
 
