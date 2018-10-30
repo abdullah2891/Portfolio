@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start" : "mkdir dist/ && mkdir dist/js && node server.js",
+    "start" : "mkdir dist/ && mkdir dist/js && gulp && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "abdullah rahman",
