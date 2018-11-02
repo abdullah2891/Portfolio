@@ -4,7 +4,7 @@ export const scrollHeight = ()=>{
 }
 
 export const scroll = (last_postion,initial_position=0)=>{
-	const rate = 15;
+	const rate = 100;
 	let position = initial_position ;
 	const repeatOften = ()=>{
 		position = position+rate;
@@ -20,7 +20,7 @@ export const scroll = (last_postion,initial_position=0)=>{
 }
 
 export const fadeIn = (element,initial=0)=>{
-	const rate = 0.01;
+	const rate = 0.05;
 	//final opacity can't be bigger than 1
 	const finalOpacity = 1;
 
