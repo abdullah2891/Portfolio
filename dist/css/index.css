@@ -1,0 +1,111 @@
+@keyframes widthAnimation {
+  from {
+    width: 0vw; }
+  to {
+    width: 90vw; } }
+
+@keyframes heightAnimation {
+  from {
+    height: 0; }
+  to {
+    height: 90vh; } }
+
+body .side-footer {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 30px;
+  padding-top: 10vh;
+  padding-left: 125px;
+  text-transform: uppercase;
+  min-height: 90vh; }
+
+body .vertical-line-project:after {
+  content: '';
+  width: 5px;
+  height: 90vh;
+  background: black;
+  position: absolute;
+  left: 50%;
+  top: 16px;
+  animation: heightAnimation 2s; }
+
+body .contact-footer:after {
+  content: '';
+  width: 5px;
+  height: 90vh;
+  background: black;
+  position: absolute;
+  left: 36%;
+  top: 26px;
+  animation: heightAnimation 2s; }
+
+body .first-page .navigation li {
+  font-size: 30px;
+  text-transform: uppercase;
+  list-style: none;
+  padding-top: 10vh; }
+
+body .first-page .navigation li:hover {
+  border-bottom: 2px solid #F117B4;
+  font-weight: thick;
+  cursor: pointer; }
+
+body .first-page .main-page {
+  padding-top: 10vh;
+  padding-left: 30vh;
+  padding-bottom: 10vh;
+  padding-right: 10vh;
+  min-height: 90vh; }
+  body .first-page .main-page .introduction {
+    text-transform: uppercase;
+    font-size: 30px; }
+    body .first-page .main-page .introduction .title {
+      font-size: 4em; }
+
+body .first-page .main-page:after {
+  content: '';
+  width: 5px;
+  height: 90vh;
+  background: black;
+  position: absolute;
+  left: 36%;
+  top: 26px;
+  margin-left: 66%;
+  margin-top: -4vh;
+  animation: heightAnimation 2s; }
+
+body .first-page:after {
+  content: '';
+  margin-left: 5vw;
+  height: 4px;
+  width: 90vw;
+  background: black;
+  position: relative;
+  bottom: -10px;
+  animation: widthAnimation 2s; }
+
+body .second-page:after {
+  content: '';
+  width: 90vw;
+  margin-left: 5vw;
+  height: 4px;
+  background: black;
+  position: relative;
+  bottom: -21px;
+  animation: widthAnimation 2s; }
+
+body .second-page {
+  opacity: 0; }
+  body .second-page .project-description {
+    padding-top: 13vh; }
+
+body .third-page {
+  opacity: 0; }
+  body .third-page .contact {
+    padding: 30vh; }
+    body .third-page .contact .custom-input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid;
+      margin-left: 14px; }
