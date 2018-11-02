@@ -31,7 +31,7 @@ export default class App extends Index{
 	_handleScrolling(){
 		//section position
 		const second_page_position  =( (7/10) * scrollHeight()) + 50;
-		const third_page_position = (8/10) * scrollHeight();
+		const third_page_position = (9/10) * scrollHeight();
 		
 
 		//saving this positionn for change

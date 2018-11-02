@@ -4,13 +4,12 @@ export const scrollHeight = ()=>{
 }
 
 export const scroll = (last_postion,initial_position=0)=>{
-	const rate = 100;
+	const rate = 20;
 	let position = initial_position ;
 	const repeatOften = ()=>{
 		position = position+rate;
 		window.scroll(0,position);
 		const globalID = requestAnimationFrame(repeatOften);
-
 		if(position >= last_postion){
 			cancelAnimationFrame(globalID);
 		}
