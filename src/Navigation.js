@@ -20,7 +20,6 @@ export default class Navigation extends Index{
 				//section position
 				const second_page_position  =( (3/10) * scrollHeight()) ;
 				const third_page_position = (8/10) * scrollHeight();
-	console.log(second_page_position,third_page_position);	
 				
 
 			    	state.didScroll = {

@@ -4,7 +4,7 @@ export const scrollHeight = ()=>{
 }
 
 export const scroll = (last_postion,initial_position=0)=>{
-	const rate = 20;
+	const rate = 15;
 	let position = initial_position ;
 	const repeatOften = ()=>{
 		position = position+rate;
