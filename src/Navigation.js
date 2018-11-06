@@ -21,12 +21,7 @@ export default class Navigation extends Index{
 				const second_page_position  =( (3/10) * scrollHeight()) ;
 				const third_page_position = (8/10) * scrollHeight();
 				
-
-			    	state.didScroll = {
-					secondPage : true,
-					thirdPage : true
-				}
-
+				state.didScroll[pageName] = true;
 
 			    	switch(pageName){
 					case 'secondPage':
