@@ -7,9 +7,7 @@ export default class MainPage extends Index{
 			<div class="introduction">
 				<p class="title">Hi</p>
 				<p>Welcome to this corner of the internet</p>
-
-				<p> How can I help you today</p>
-				<p> How can I help you today</p>
+				<p>My Name is Abdullah Rahman</p>
 				<p> How can I help you today</p>
 			</div>
 
