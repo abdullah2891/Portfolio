@@ -1,0 +1,11 @@
+body:after {
+  content: "";
+  background-image: url(https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  opacity: 0.25;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: relative;
+  z-index: -1;
+  display: block; }

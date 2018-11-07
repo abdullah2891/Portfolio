@@ -1,6 +1,11 @@
 @import 'animation';
 $transition-time : 2s;
-body{
+
+body{	
+	font-family : 'Raleway','san-serif';
+	background-image:url('light-background.jpg');
+	background-repeat: repeat-y;
+	background-size:  auto 100%;
 	.side-footer{
 		writing-mode: vertical-rl;
 		text-orientation: mixed;
