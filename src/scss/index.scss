@@ -1,38 +1,41 @@
 @import 'animation';
+@import 'icons';
+@import 'common';
+@import 'contact';
+
 $transition-time : 2s;
+$line-color: white;
+$line-width: 0.8px;
 
 body{	
 	font-family : 'Raleway','san-serif';
-	background-image:url('light-background.jpg');
-	background-repeat: repeat-y;
-	background-size:  auto 100%;
+	background-color : black;
+	color: white;
 	.side-footer{
-		writing-mode: vertical-rl;
-		text-orientation: mixed;
-		font-size: 30px;
-		padding-top : 10vh;
 		padding-left : 125px;
 		text-transform:uppercase;		
 		min-height : 90vh;
 	}
 
 	.vertical-line-project:after{
+		opacity : 0.3;
 		content : '';
-		width : 5px;
+		width : $line-width;
 		height : 90vh;
-		background : black;
+		background : $line-color;
 		position : absolute;
-		left : 50%;
+		left : 100%;
 		top : 16px;
 		animation: heightAnimation $transition-time;;
 	}
 
 
 	.contact-footer:after{
+		opacity : 0.3;
 		content : '';
-		width : 5px;
+		width : $line-width;
 		height : 90vh;
-		background : black;
+		background : $line-color;
 		position : absolute;
 		left : 36%;
 		top : 26px;
@@ -42,6 +45,9 @@ body{
 
 
 	.first-page{
+
+		background-image:url('darkbackground.jpg');
+		background-size: 100% auto;
 		.navigation{
 			li {
 				font-size : 30px;
@@ -75,10 +81,11 @@ body{
 		}
 
 		.main-page:after{
+			opacity : 0.3;
 			content : '';
-			width : 5px;
+			width : $line-width;
 			height : 90vh;
-			background : black;
+			background : $line-color;
 			position : absolute;
 			left : 36%;
 			top : 26px;
@@ -89,22 +96,24 @@ body{
 		}
 	}
 	.first-page:after{
+		opacity : 0.3;
 		content : '';
 		margin-left: 5vw;
-		height:4px;
+		height: $line-width;
 		width : 90vw;
-		background:black;
+		background: $line-color;
 		position:relative;;
 		bottom:-10px;
 		animation : widthAnimation $transition-time;;
 	}
 
 	.second-page:after{
+		opacity : 0.3;
 		content : '';
 		width:90vw;
 		margin-left: 5vw;
-		height:4px;
-		background:black;
+		height: $line-width;
+		background: $line-color;
 		position:relative;;
 		bottom:-21px;
 		animation : widthAnimation $transition-time;
@@ -114,6 +123,31 @@ body{
 		opacity : 0;
 		.project-description{
 			padding-top : 13vh;
+		}
+
+		.image-container{
+			margin-top: 20px;
+			width : 100%;
+			height: 700px;
+			overflow-y:scroll;
+			li{
+				padding-bottom: 10px;
+				list-style : none;
+				.project-image{
+					width : 100%;
+				}
+			}
+			.image-container::-webkit-scrollbar-track {
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+			}
+
+
+		
+
+.image-container::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
 		}
 
 	}

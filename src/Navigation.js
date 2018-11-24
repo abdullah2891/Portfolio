@@ -12,22 +12,21 @@ export default class Navigation extends Index{
 
 	_addEventListener(){
 		[...document.getElementsByClassName('navigation-button')].forEach(button=>{
-
 		    button.addEventListener('click',function(event){
-				const pageName = event.srcElement.getAttribute('data-navigation');
-			    	const position = event.srcElement.offsetTop;
-
-				//section position
+				const pageName = event.srcElement.getAttribute('data-navigation')||event.currentTarget.getAttribute('data-navigation');
+			    	const position = event.srcElement.offsetTop || event.currentTarget.offsetTop;
+				
+			    	//section position
 				const second_page_position  =( (3/10) * scrollHeight()) ;
 				const third_page_position = (8/10) * scrollHeight();
 				
 				state.didScroll[pageName] = true;
-
+console.log(pageName)
 			    	switch(pageName){
 					case 'secondPage':
 						scroll(second_page_position);
 						fadeIn(this.secondPageElementId);
-						document.getElementById('projectText').className+=' vertical-line-project ';
+						document.getElementById('projectDescription').className+=' vertical-line-project ';
 						 break;
 					case 'thirdPage':
 						fadeIn(this.secondPageElementId);
@@ -43,12 +42,18 @@ export default class Navigation extends Index{
 	render(){
 
 		return `
-			<ul class="navigation">
-				<li data-navigation="about"  class="navigation-button" >About Me</li>
-				<li data-navigation="secondPage" class="navigation-button">Project</li>
-				<li data-navigation="thirdPage" class="navigation-button">Contact me</li>
-
-			</ul>
+			<div class="row">
+				<div data-navigation="about" class="col-md-4 cursor-pointer  navigation-button">
+					<img class="icon" src="css/icons/idea.svg" />
+				</div>
+				<div data-navigation="secondPage" class="col-md-4 cursor-pointer navigation-button">
+					<img class="icon" src="css/icons/briefing.svg"/>
+				</div>
+				
+				<div data-navigation="thirdPage" class="col-md-4 cursor-pointer navigation-button">
+					<img class="icon" src="css/icons/present.svg"/>
+				</div>
+			</div>
 		`;
 
 	}

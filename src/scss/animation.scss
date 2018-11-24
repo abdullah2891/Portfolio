@@ -8,3 +8,10 @@
 	from { height : 0}
 	to {height: 90vh}
 }
+
+
+
+@keyframes fadingInAnimation{
+	from { opacity: 0}
+	to { opacity: 1}
+}

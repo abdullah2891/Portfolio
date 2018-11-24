@@ -1,43 +1,56 @@
 import Index from './lib/index';
-
+import {state} from './state';
+import {fadeIn} from './util';
 
 export default class ProjectDescription extends Index{
+	componentDidMount(){
+		state.notifyPropertyChange = (scrollPosition)=>{
+			console.log({scrollPosition});
+			this._updateProjectText(scrollPosition);
+			this.render();		
+		};
+	}
+	
+	/**
+	 * _updateProjectText
+	 *
+	 * @param scrollPosition
+	 */
+	_updateProjectText(scrollPosition){
+		[...document.getElementsByClassName('project-text')].forEach((text,index)=>{
+			const project_dom = state.projects[index];
+			const showText = project_dom.upper_end > scrollPosition && project_dom.position <=scrollPosition;
+			text.style.display = showText ? 'block' : 'none'; 
+			console.log(project_dom.opacity)
+			text.style.opacity = project_dom.opacity;
+		})
+	}
 
 	render(){
 		return `
-			<div class="project-description">
-				<div class="row">
-					<div class="col-md-6">
-						<h3>Task Organizer</h3>
-						<p>A Task Organizer web application with Ember js frontend and Django Rest Framework,integrating MySQL as database support.</p>
-						<p>Django REST, Ember Js, MySQL, Heroku, Bootstrap </p>
-					</div>
+			<div class="project-description side-footer" id="projectDescription">
+				${
+					state.projects.reduce((html,project)=>{
+						const showRow = project.show ? "block" : "none";
 
-					<div class="col-md-6">
-						<h3>Offline First Reddit Viewer</h3>
-						<p>This react app utilizes service worker and caching heavily to give offline first experience for a subreddit(reddit sub forum).Currently, I am working on making it more reader friendly and writer friendly.</p>
-						<p>React , Service Worker , Oauth2 . Heroku, Bootstrap </p>
-					</div>
+						const row = `
+							<div class="row project-text" style="display: ${showRow}" >
+								<div class="col-md-12">
+									<h3>${project.title}</h3>
+									<p>${project.description}</p>
+									<p>${project.skills}</p>
+								</div>
+							</div>
+						`;
+						html+=row + '\n';
+						
+						return html;
+
+					},'')
+
+				}
 
 
-
-				</div>
-				<div class="row">
-					<div class="col-md-6">
-						<h3>Change My View Reader </h3>
-						<p>A Reddit Client made using React Native which allows user add post and perform action on the app(authenticated using Oauth2)</p>
-						<p>React Native , Oauth2 , Heroku</p>
-					</div>
-
-						<div class="col-md-6">
-						<h3>Project 4</h3>
-						<p>description</p>
-				
-						<p>description</p>
-						<p>description</p>
-						<p>description</p>
-					</div>
-				</div>
 			</div>
 		`;
 
