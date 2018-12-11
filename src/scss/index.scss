@@ -4,13 +4,11 @@
 @import 'contact';
 
 $transition-time : 2s;
-$line-color: white;
+$line-color: black;
 $line-width: 0.8px;
 
 body{	
 	font-family : 'Raleway','san-serif';
-	background-color : black;
-	color: white;
 	.side-footer{
 		padding-left : 125px;
 		text-transform:uppercase;		
@@ -24,7 +22,7 @@ body{
 		height : 90vh;
 		background : $line-color;
 		position : absolute;
-		left : 100%;
+		left : 61vw;
 		top : 16px;
 		animation: heightAnimation $transition-time;;
 	}
@@ -46,7 +44,7 @@ body{
 
 	.first-page{
 
-		background-image:url('darkbackground.jpg');
+		background-image:url('light-background.jpg');
 		background-size: 100% auto;
 		.navigation{
 			li {
@@ -72,11 +70,20 @@ body{
 
 			.introduction{
 				text-transform : uppercase;
-				.title{
-					font-size :4em;
-				}
-				font-size : 30px;
+				margin-top: 20vh;
+				.name-pad{
+					padding: 10px;
+					font-size: 20px;
+					text-align: center;
 
+					.title{
+						font-size: 30px !important;
+					}
+					border-color:white;
+					border-width:0.5px;
+					border-style: solid;
+					border-radius: 15px;
+				}
 			}
 		}
 
@@ -153,6 +160,7 @@ body{
 	}
 
 	.third-page{
+		background-color: #eceaeb;
 		opacity : 0;
 		.contact{
 			padding:30vh;

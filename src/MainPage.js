@@ -7,12 +7,16 @@ export default class MainPage extends Index{
 	}
 	render(){
 		return `
-			<div class="introduction">
-				<p class="title">Hi</p>
-				<p>Welcome to this corner of the internet</p>
-				<p>My Name is Abdullah Rahman</p>
-				<p> How can I help you today</p>
-				<div data-component="Navigation"></div>
+			<div class="row introduction">
+				<div class="col-md-3"></div>
+
+			<div class="name-pad col-md-5">
+				<p class="title"><strong>Hi,</strong></p>
+					<p><strong>Welcome to this corner of the internet</strong></p>
+					<p><strong>My Name is Abdullah Rahman</strong></p>
+					<p><strong>How can I help you today</strong></p>
+					<div data-component="Navigation"></div>
+				</div>
 			</div>
 
 		`;

@@ -319,15 +319,12 @@
   min-height: 100px;
   border-radius: 5px;
   padding: 10px; }
-  .login-form label, .login-form input {
-    color: yellow !important; }
-  .login-form input, .login-form button, .login-form textarea {
+  .login-form input, .login-form textarea {
+    border-width: 3px;
     background-color: #ffffff0f !important; }
 
 body {
-  font-family: 'Raleway','san-serif';
-  background-color: black;
-  color: white; }
+  font-family: 'Raleway','san-serif'; }
   body .side-footer {
     padding-left: 125px;
     text-transform: uppercase;
@@ -337,9 +334,9 @@ body {
     content: '';
     width: 0.8px;
     height: 90vh;
-    background: white;
+    background: black;
     position: absolute;
-    left: 100%;
+    left: 61vw;
     top: 16px;
     animation: heightAnimation 2s; }
   body .contact-footer:after {
@@ -347,13 +344,13 @@ body {
     content: '';
     width: 0.8px;
     height: 90vh;
-    background: white;
+    background: black;
     position: absolute;
     left: 36%;
     top: 26px;
     animation: heightAnimation 2s; }
   body .first-page {
-    background-image: url("darkbackground.jpg");
+    background-image: url("light-background.jpg");
     background-size: 100% auto; }
     body .first-page .navigation li {
       font-size: 30px;
@@ -372,15 +369,23 @@ body {
       min-height: 90vh; }
       body .first-page .main-page .introduction {
         text-transform: uppercase;
-        font-size: 30px; }
-        body .first-page .main-page .introduction .title {
-          font-size: 4em; }
+        margin-top: 20vh; }
+        body .first-page .main-page .introduction .name-pad {
+          padding: 10px;
+          font-size: 20px;
+          text-align: center;
+          border-color: white;
+          border-width: 0.5px;
+          border-style: solid;
+          border-radius: 15px; }
+          body .first-page .main-page .introduction .name-pad .title {
+            font-size: 30px !important; }
     body .first-page .main-page:after {
       opacity: 0.3;
       content: '';
       width: 0.8px;
       height: 90vh;
-      background: white;
+      background: black;
       position: absolute;
       left: 36%;
       top: 26px;
@@ -393,7 +398,7 @@ body {
     margin-left: 5vw;
     height: 0.8px;
     width: 90vw;
-    background: white;
+    background: black;
     position: relative;
     bottom: -10px;
     animation: widthAnimation 2s; }
@@ -403,7 +408,7 @@ body {
     width: 90vw;
     margin-left: 5vw;
     height: 0.8px;
-    background: white;
+    background: black;
     position: relative;
     bottom: -21px;
     animation: widthAnimation 2s; }
@@ -427,6 +432,7 @@ body {
         background-color: darkgrey;
         outline: 1px solid slategrey; }
   body .third-page {
+    background-color: #eceaeb;
     opacity: 0; }
     body .third-page .contact {
       padding: 30vh; }

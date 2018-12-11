@@ -2,11 +2,9 @@
 	min-height: 100px;
 	border-radius: 5px;
 	padding: 10px;
-	label,input{
-		color: yellow !important;
-	}
 
-	input , button , textarea{
+	input , textarea{
+		border-width: 3px;
 		background-color: #ffffff0f !important;
 	}
 }

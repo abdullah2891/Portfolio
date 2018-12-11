@@ -44,14 +44,14 @@ console.log(pageName)
 		return `
 			<div class="row">
 				<div data-navigation="about" class="col-md-4 cursor-pointer  navigation-button">
-					<img class="icon" src="css/icons/idea.svg" />
+					<img class="icon" src="css/icons/architect.svg" />
 				</div>
 				<div data-navigation="secondPage" class="col-md-4 cursor-pointer navigation-button">
-					<img class="icon" src="css/icons/briefing.svg"/>
+					<img class="icon" src="css/icons/projector-screen.svg"/>
 				</div>
 				
 				<div data-navigation="thirdPage" class="col-md-4 cursor-pointer navigation-button">
-					<img class="icon" src="css/icons/present.svg"/>
+					<img class="icon" src="css/icons/lightbulb.svg"/>
 				</div>
 			</div>
 		`;

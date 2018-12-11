@@ -68,10 +68,8 @@ export default class App extends Index{
 		return `
 			<div class="container-fluid">
 				<div id="firstPage"  class="row first-page">
-					<div class="col-md-7 main-page">
+					<div class="col-md-12 main-page">
 						<div data-component="MainPage"></div>	
-					</div>
-					<div class="col-md-3 navigation">
 					</div>
 
 				</div>
