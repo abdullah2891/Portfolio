@@ -26,7 +26,6 @@ console.log(pageName)
 					case 'secondPage':
 						scroll(second_page_position);
 						fadeIn(this.secondPageElementId);
-						document.getElementById('projectDescription').className+=' vertical-line-project ';
 						 break;
 					case 'thirdPage':
 						fadeIn(this.secondPageElementId);

@@ -1,0 +1,11 @@
+.third-page {
+  background-color: #eceaeb;
+  opacity: 0; }
+  .third-page .contact {
+    padding: 30vh; }
+    .third-page .contact .custom-input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid;
+      margin-left: 14px; }

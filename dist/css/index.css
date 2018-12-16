@@ -315,6 +315,28 @@
 .cursor-pointer {
   cursor: pointer; }
 
+.vertical-line-project:after {
+  opacity: 0.3;
+  content: '';
+  width: 2px;
+  height: 90vh;
+  background: black;
+  position: absolute;
+  left: 61vw;
+  top: 16px;
+  animation: heightAnimation 2s; }
+
+.horizontal-line-project:after {
+  opacity: 0.3;
+  content: '';
+  width: 90vw;
+  height: 2px;
+  background: black;
+  position: absolute;
+  left: 61vw;
+  top: 16px;
+  animation: widthAnimation 2s; }
+
 .login-form {
   min-height: 100px;
   border-radius: 5px;
@@ -323,122 +345,74 @@
     border-width: 3px;
     background-color: #ffffff0f !important; }
 
+.first-page {
+  background-image: url("light-background.jpg");
+  background-size: 100% auto; }
+  .first-page .navigation li {
+    font-size: 30px;
+    text-transform: uppercase;
+    list-style: none;
+    padding-top: 10vh; }
+  .first-page .navigation li:hover {
+    border-bottom: 2px solid #F117B4;
+    font-weight: thick;
+    cursor: pointer; }
+  .first-page .main-page {
+    padding-top: 10vh;
+    padding-left: 30vh;
+    padding-bottom: 10vh;
+    padding-right: 10vh;
+    min-height: 90vh; }
+    .first-page .main-page .introduction {
+      text-transform: uppercase;
+      margin-top: 20vh; }
+      .first-page .main-page .introduction .name-pad {
+        padding: 10px;
+        font-size: 20px;
+        text-align: center;
+        border-color: white;
+        border-width: 0.5px;
+        border-style: solid;
+        border-radius: 15px; }
+        .first-page .main-page .introduction .name-pad .title {
+          font-size: 30px !important; }
+
+#secondPage .project-description {
+  padding-top: 13vh; }
+
+#secondPage .image-container img {
+  width: 100%; }
+
+#secondPage .project-row {
+  min-height: 200px;
+  margin-left: 10px;
+  margin-top: 10vh; }
+
+.third-page {
+  background-color: #eceaeb;
+  opacity: 0; }
+  .third-page .contact {
+    padding: 30vh; }
+    .third-page .contact .custom-input {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: solid;
+      margin-left: 14px; }
+
 body {
   font-family: 'Raleway','san-serif'; }
   body .side-footer {
     padding-left: 125px;
     text-transform: uppercase;
     min-height: 90vh; }
-  body .vertical-line-project:after {
-    opacity: 0.3;
-    content: '';
-    width: 0.8px;
-    height: 90vh;
-    background: black;
-    position: absolute;
-    left: 61vw;
-    top: 16px;
-    animation: heightAnimation 2s; }
   body .contact-footer:after {
     opacity: 0.3;
     content: '';
-    width: 0.8px;
+    width: 2px;
     height: 90vh;
     background: black;
     position: absolute;
     left: 36%;
     top: 26px;
     animation: heightAnimation 2s; }
-  body .first-page {
-    background-image: url("light-background.jpg");
-    background-size: 100% auto; }
-    body .first-page .navigation li {
-      font-size: 30px;
-      text-transform: uppercase;
-      list-style: none;
-      padding-top: 10vh; }
-    body .first-page .navigation li:hover {
-      border-bottom: 2px solid #F117B4;
-      font-weight: thick;
-      cursor: pointer; }
-    body .first-page .main-page {
-      padding-top: 10vh;
-      padding-left: 30vh;
-      padding-bottom: 10vh;
-      padding-right: 10vh;
-      min-height: 90vh; }
-      body .first-page .main-page .introduction {
-        text-transform: uppercase;
-        margin-top: 20vh; }
-        body .first-page .main-page .introduction .name-pad {
-          padding: 10px;
-          font-size: 20px;
-          text-align: center;
-          border-color: white;
-          border-width: 0.5px;
-          border-style: solid;
-          border-radius: 15px; }
-          body .first-page .main-page .introduction .name-pad .title {
-            font-size: 30px !important; }
-    body .first-page .main-page:after {
-      opacity: 0.3;
-      content: '';
-      width: 0.8px;
-      height: 90vh;
-      background: black;
-      position: absolute;
-      left: 36%;
-      top: 26px;
-      margin-left: 66%;
-      margin-top: -4vh;
-      animation: heightAnimation 2s; }
-  body .first-page:after {
-    opacity: 0.3;
-    content: '';
-    margin-left: 5vw;
-    height: 0.8px;
-    width: 90vw;
-    background: black;
-    position: relative;
-    bottom: -10px;
-    animation: widthAnimation 2s; }
-  body .second-page:after {
-    opacity: 0.3;
-    content: '';
-    width: 90vw;
-    margin-left: 5vw;
-    height: 0.8px;
-    background: black;
-    position: relative;
-    bottom: -21px;
-    animation: widthAnimation 2s; }
-  body .second-page {
-    opacity: 0; }
-    body .second-page .project-description {
-      padding-top: 13vh; }
-    body .second-page .image-container {
-      margin-top: 20px;
-      width: 100%;
-      height: 700px;
-      overflow-y: scroll; }
-      body .second-page .image-container li {
-        padding-bottom: 10px;
-        list-style: none; }
-        body .second-page .image-container li .project-image {
-          width: 100%; }
-      body .second-page .image-container .image-container::-webkit-scrollbar-track {
-        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
-      body .second-page .image-container .image-container::-webkit-scrollbar-thumb {
-        background-color: darkgrey;
-        outline: 1px solid slategrey; }
-  body .third-page {
-    background-color: #eceaeb;
-    opacity: 0; }
-    body .third-page .contact {
-      padding: 30vh; }
-      body .third-page .contact .custom-input {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-bottom: solid;
-        margin-left: 14px; }

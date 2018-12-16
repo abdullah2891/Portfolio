@@ -1,0 +1,15 @@
+.third-page{
+		background-color: #eceaeb;
+		opacity : 0;
+		.contact{
+			padding:30vh;
+			.custom-input{
+				border-top : none;
+				border-left : none;
+				border-right : none;
+				border-bottom : solid;
+				margin-left : 14px;
+			}
+		}
+
+	}

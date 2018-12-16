@@ -1,3 +1,7 @@
+$line-color: black;
+$line-width: 2px;
+
+
 @each $margin in -4,-2,-1,0,1,2,3,4,5,6,7,8{
 	@each $direction in top,left,bottom,right{
 		.margin-#{$direction}-#{$margin}{
@@ -17,4 +21,30 @@
 
 .cursor-pointer{
 	cursor: pointer;
+}
+
+
+
+.vertical-line-project:after{
+	opacity : 0.3;
+	content : '';
+	width : $line-width;
+	height : 90vh;
+	background : $line-color;
+	position : absolute;
+	left : 61vw;
+	top : 16px;
+	animation: heightAnimation $transition-time;;
+}
+
+.horizontal-line-project:after{
+	opacity : 0.3;
+	content : '';
+	width : 90vw;
+	height : $line-width;
+	background : $line-color;
+	position : absolute;
+	left : 61vw;
+	top : 16px;
+	animation: widthAnimation $transition-time;;
 }
