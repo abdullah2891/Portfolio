@@ -8,9 +8,9 @@ export default class MainPage extends Index{
 	render(){
 		return `
 			<div class="row introduction">
-				<div class="col-md-3"></div>
 
-			<div class="name-pad col-md-5">
+			<div class=" col-lg-1"></div>
+			<div class="name-pad col-lg-6   col-sm-10">
 				<p class="title"><strong>Hi,</strong></p>
 					<p><strong>Welcome to this corner of the internet</strong></p>
 					<p><strong>My Name is Abdullah Rahman</strong></p>

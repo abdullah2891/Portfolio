@@ -8,6 +8,8 @@ $transition-time : 2s;
 @import 'second-page';
 @import 'third_page';
 
+@import 'responsive.scss';
+
 body{	
 	font-family : 'Raleway','san-serif';
 	.side-footer{

@@ -346,7 +346,6 @@
     background-color: #ffffff0f !important; }
 
 .first-page {
-  background-image: url("light-background.jpg");
   background-size: 100% auto; }
   .first-page .navigation li {
     font-size: 30px;
@@ -359,9 +358,9 @@
     cursor: pointer; }
   .first-page .main-page {
     padding-top: 10vh;
-    padding-left: 30vh;
+    padding-left: 30vw;
     padding-bottom: 10vh;
-    padding-right: 10vh;
+    padding-right: 10vw;
     min-height: 90vh; }
     .first-page .main-page .introduction {
       text-transform: uppercase;
@@ -370,7 +369,7 @@
         padding: 10px;
         font-size: 20px;
         text-align: center;
-        border-color: white;
+        border-color: black;
         border-width: 0.5px;
         border-style: solid;
         border-radius: 15px; }
@@ -399,6 +398,11 @@
       border-right: none;
       border-bottom: solid;
       margin-left: 14px; }
+
+@media (min-width: 768px) {
+  .main-page-sm {
+    padding-top: 0vh !important;
+    min-height: 70vh !important; } }
 
 body {
   font-family: 'Raleway','san-serif'; }
