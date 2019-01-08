@@ -399,10 +399,12 @@
       border-bottom: solid;
       margin-left: 14px; }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .main-page-sm {
     padding-top: 0vh !important;
-    min-height: 70vh !important; } }
+    min-height: 70vh !important; }
+  .introduction-sm {
+    margin-top: 10vh !important; } }
 
 body {
   font-family: 'Raleway','san-serif'; }

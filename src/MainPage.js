@@ -7,7 +7,7 @@ export default class MainPage extends Index{
 	}
 	render(){
 		return `
-			<div class="row introduction">
+			<div class="row introduction introduction-sm">
 
 			<div class=" col-lg-1"></div>
 			<div class="name-pad col-lg-6   col-sm-10">
