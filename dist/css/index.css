@@ -399,12 +399,20 @@
       border-bottom: solid;
       margin-left: 14px; }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .main-page-sm {
     padding-top: 0vh !important;
-    min-height: 70vh !important; }
+    min-height: 70vh !important;
+    padding-left: 10vw !important; }
   .introduction-sm {
-    margin-top: 10vh !important; } }
+    margin-top: 8vh !important; }
+  .navigation-button {
+    height: 80px;
+    width: 80px;
+    margin-left: 8vw; }
+    .navigation-button .icon {
+      height: 50px;
+      width: 50px; } }
 
 body {
   font-family: 'Raleway','san-serif'; }
