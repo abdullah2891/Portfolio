@@ -16,20 +16,16 @@ export default class Navigation extends Index{
 				const pageName = event.srcElement.getAttribute('data-navigation')||event.currentTarget.getAttribute('data-navigation');
 			    	const position = event.srcElement.offsetTop || event.currentTarget.offsetTop;
 				
-			    	//section position
-				const second_page_position  =( (3/10) * scrollHeight()) ;
-				const third_page_position = (8/10) * scrollHeight();
-				
 				state.didScroll[pageName] = true;
-console.log(pageName)
+
 			    	switch(pageName){
 					case 'secondPage':
-						scroll(second_page_position);
+						scroll(state.position.secondPage -20);
 						fadeIn(this.secondPageElementId);
 						 break;
 					case 'thirdPage':
 						fadeIn(this.secondPageElementId);
-						scroll(third_page_position);
+						scroll(state.position.thirdPage -20);
 						fadeIn(this.thirdPageElementId);
 						document.getElementById('contactFooter').className +=' contact-footer ';
 						break;
@@ -42,14 +38,14 @@ console.log(pageName)
 
 		return `
 			<div class="row">
-				<div data-navigation="about" class="col-lg-4 col-sm-4 cursor-pointer  navigation-button">
-					<img class="icon" src="css/icons/architect.svg" />
+				<div data-navigation="about"  title="Github" class="col-lg-4 col-sm-4 cursor-pointer  navigation-button">
+					<a href="https://github.com/abdullah2891"> <img class="icon" src="css/icons/architect.svg" /></a>
 				</div>
-				<div data-navigation="secondPage" class="col-lg-4 col-sm-4 cursor-pointer navigation-button">
+				<div data-navigation="secondPage"  title="Projects" class="col-lg-4 col-sm-4 cursor-pointer navigation-button">
 					<img class="icon" src="css/icons/projector-screen.svg"/>
 				</div>
 				
-				<div data-navigation="thirdPage" class="col-lg-4 col-sm-4 cursor-pointer navigation-button">
+				<div data-navigation="thirdPage"  title="Contacts" class="col-lg-4 col-sm-4 cursor-pointer navigation-button">
 					<img class="icon" src="css/icons/lightbulb.svg"/>
 				</div>
 			</div>
