@@ -1,6 +1,7 @@
 import Index from './lib/index';
 import {state} from './state';
 import {fadeIn,offset} from './util';
+import WaveAnimation from './wave-animation';
 
 export default class ProjectDescription extends Index{
 	componentDidMount(){
@@ -8,12 +9,16 @@ export default class ProjectDescription extends Index{
 		this._set_position();
 	
 	}
+
+	childViews(){
+		return [WaveAnimation];
+	}
 	_handleScrolling(){
 		console.log(state.projects)
 		window.addEventListener('scroll',function(event){
 			const scroll_position = window.scrollY + 500;
 			const range = 500;
-console.log(scroll_position)
+
 			const scrolled_project = state.projects.find(project=>{
 				const position = project.position.top;
 
@@ -54,6 +59,7 @@ console.log(scroll_position)
 		const image = (project)=>`<img src="${project.link}" alt="${project.title}" />`;
 
 		return `
+			<div class data-component="WaveAnimation"></div>	
 			${
 				state.projects.reduce((html,project,index)=>{
 					const showRow = project.show ? "block" : "none";
