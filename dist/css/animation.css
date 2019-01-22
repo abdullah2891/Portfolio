@@ -17,6 +17,8 @@
     opacity: 1; } }
 
 #wave-animation {
-  height: 100vh;
+  height: 235%;
+  top: 102%;
+  left: -1%;
   width: 100vw;
   position: absolute; }

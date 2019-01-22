@@ -17,7 +17,9 @@
     opacity: 1; } }
 
 #wave-animation {
-  height: 100vh;
+  height: 235%;
+  top: 102%;
+  left: -1%;
   width: 100vw;
   position: absolute; }
 
@@ -386,6 +388,7 @@
           font-size: 30px !important; }
 
 #secondPage {
+  font-size: 20px;
   color: white; }
   #secondPage .project-description {
     padding-top: 13vh; }

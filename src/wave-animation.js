@@ -1,10 +1,10 @@
 import Index from './lib/index';
-
+import {state} from './state';
 
 export default class WaveAnimation extends Index {
 	componentDidMount(){
 		const canvas = document.getElementById('wave-animation');
-	
+
 		if(canvas.getContext){
 			this._draw(canvas);
 		}else{
@@ -13,8 +13,9 @@ export default class WaveAnimation extends Index {
 	}
 	_draw(canvas){
 		const ctx = canvas.getContext('2d');
+		const {thirdPage, secondPage} = state.position;
+		const height = parseInt(thirdPage) - parseInt(secondPage);
 		this._draw_wavy_path(ctx);	
-		
 	}
 
 
@@ -32,8 +33,9 @@ export default class WaveAnimation extends Index {
 			region.lineTo(300,0);
 			region.closePath();
 
-			ctx.fillStyle = '#77dd77';
+			ctx.fillStyle = '#2d2727';
 			ctx.fill(region, 'evenodd');
+
 			for(let offsetx = 0; offsetx <= 300 ; offsetx = offsetx + 40){
 				let start = { x: 0+offsetx,    y: 20 + offsety  + offset };
 				let cp1 =   { x: 10+offsetx,   y: 0  + offsety + offset};
@@ -43,14 +45,13 @@ export default class WaveAnimation extends Index {
 				region.moveTo(start.x, start.y);
 				region.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, end.x, end.y);
 			}
-			ctx.fillStyle = '#77dd77';
+			ctx.fillStyle = '#2d2727';
 			ctx.fill(region, 'evenodd');
 			offset = offset + 0.33;
 
 			const requestId = requestAnimationFrame(draw);
 
 
-console.log("test" , offset, requestId)
 			if(offset >= 1000){
 				cancelAnimationFrame(requestId);
 			}

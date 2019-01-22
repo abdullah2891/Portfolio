@@ -39,5 +39,11 @@ export  const state  =  {
 		secondPage: null,
 		thirdPage: null
 	},
+
+	scroll:{
+		firstPage: null,
+		secondPage: null,
+		thirdPage: null
+	},
 	notifyPropertyChange(){}
 }
