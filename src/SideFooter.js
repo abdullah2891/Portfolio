@@ -10,9 +10,6 @@ export default class SideFooter extends Index{
 	}
 	
 	_updateOpacity(scrollPosition){
-
-		
-
 		[...document.querySelectorAll('[data-index]')].forEach(currentDom=>{
 			const index = currentDom.getAttribute('data-index');
 			const project = state.projects[index];
@@ -29,7 +26,7 @@ console.log(currentOpacity)
 			currentDom.style.opacity = currentOpacity;
 			project.offset = currentOpacity;
 			project.opacity = currentOpacity;
-	})
+		})
 
 	}
 

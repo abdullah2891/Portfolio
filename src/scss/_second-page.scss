@@ -17,19 +17,15 @@
 		margin-left: 10px; 
 		margin-top: 10vh;
 	}
+	
 
 	.wavy-image{
 		position: absolute;
-		top: 100%;
-		left: -1%;
+		top: 100vh;
+		left: -40%;
+		height: 250vh;
+		width: 200vw;
 	}
-
-
-//	.wavy-portion{
-//		transform: translate(0,800px) scale(1,0);
-//		animation: waveAnimation 20s;
-//	}
-
 
 
 }

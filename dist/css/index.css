@@ -412,8 +412,10 @@
     margin-top: 10vh; }
   #secondPage .wavy-image {
     position: absolute;
-    top: 100%;
-    left: -1%; }
+    top: 100vh;
+    left: -40%;
+    height: 250vh;
+    width: 200vw; }
 
 .third-page {
   background-color: #eceaeb;
@@ -445,7 +447,8 @@
         width: 50px; } }
 
 body {
-  font-family: 'Raleway','san-serif'; }
+  font-family: 'Raleway','san-serif';
+  overflow-x: hidden; }
   body .side-footer {
     padding-left: 125px;
     text-transform: uppercase;
