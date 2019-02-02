@@ -2,7 +2,24 @@ import Index from './lib/index';
 import {state} from './state';
 
 export default class WaveAnimation extends Index {
+	componentDidMount(){
+		let  didScroll = false;
+		window.addEventListener('scroll',(event)=>{
+			const scroll_position = window.scrollY + 500;
+
+			if(!didScroll && state.scroll.secondPage < scroll_position){
+				didScroll = true;
+				document.getElementById('secondPageBackground').innerHTML = this.background();
+			}
+
+		})
+
+	}
+
 	render(){
+		return '<div id="secondPageBackground"> </div>';
+	}
+	background(){
 		
 		return `
 			<svg id="projectBackground" class="wavy-image" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
