@@ -25,7 +25,7 @@ export default class Navigation extends Index{
 						 break;
 					case 'thirdPage':
 						fadeIn(this.secondPageElementId);
-						scroll(state.position.thirdPage -20);
+						scroll(state.position.thirdPage+2000);
 						fadeIn(this.thirdPageElementId);
 						document.getElementById('contactFooter').className +=' contact-footer ';
 						break;
