@@ -16,7 +16,7 @@ export default class ProjectDescription extends Index{
 	_handleScrolling(){
 		console.log(state.projects)
 		window.addEventListener('scroll',function(event){
-			const scroll_position = window.scrollY + 500;
+			const scroll_position = window.scrollY;
 			const range = 500;
 
 			const scrolled_project = state.projects.find(project=>{

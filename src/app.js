@@ -16,6 +16,7 @@ export default class App extends Index{
 		this.thirdPageElementId = document.getElementById('thirdPage');
 		this._set_element_id();
 		this._handleScrolling();
+		this._set_element_position();
 	}
 
 
@@ -44,7 +45,6 @@ export default class App extends Index{
 		let previous_position = 0;
 
 		window.addEventListener('scroll',function(){
-				this._set_element_position();
 				const second_page_position = state.position.secondPage;
 				const third_page_position = state.position.thirdPage;
 				
@@ -63,7 +63,7 @@ export default class App extends Index{
 					fadeIn(this.secondPageElementId);
 				}
 				
-				if(!state.didScroll.thirdPage && change > 0 &&  scroll_position >=  third_page_position - 500 ){
+				if(!state.didScroll.thirdPage && change > 0 &&  scroll_position >=  third_page_position){
 					state.didScroll.thirdPage = true;
 					scroll(scrollHeight(),third_page_position);
 					fadeIn(this.thirdPageElementId);
