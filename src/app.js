@@ -35,6 +35,7 @@ export default class App extends Index{
 	_set_element_position(){
 		Object.keys(state.position).forEach(function(key){
 			state.position[key] = offset(document.getElementById(key)).top || 0;
+			console.log(state.position[key],key)
 		});
 	}
 
@@ -44,33 +45,25 @@ export default class App extends Index{
 		//saving this positionn for change
 		let previous_position = 0;
 
-		window.addEventListener('scroll',function(){
-				const second_page_position = state.position.secondPage;
-				const third_page_position = state.position.thirdPage;
-				
+	//	window.addEventListener('scroll',function(){
+	//			const second_page_position = state.position.secondPage;
+	//			const third_page_position = state.position.thirdPage;
+	//			
 
-				//get the scrolling position 
-				let scroll_position =  window.scrollY;
-				let change = scroll_position - previous_position;	
- 				
-				previous_position = scroll_position;
+	//			//get the scrolling position 
+	//			let scroll_position =  window.scrollY;
+	//			let change = scroll_position - previous_position;	
+ 	//			
+	//			previous_position = scroll_position;
 
-					
-				if(!state.didScroll.secondPage  && change > 0){
-					state.didScroll.secondPage  = true;
+	//				
+	//			if(!state.didScroll.secondPage  && change > 0){
+	//				state.didScroll.secondPage  = true;
 
-					scroll(second_page_position - 50 );
-					fadeIn(this.secondPageElementId);
-				}
-				
-				if(!state.didScroll.thirdPage && change > 0 &&  scroll_position >=  third_page_position){
-					state.didScroll.thirdPage = true;
-					scroll(scrollHeight(),third_page_position);
-					fadeIn(this.thirdPageElementId);
-				}
-				
-			
-		}.bind(this));
+	//				scroll(second_page_position - 50 );
+	//				fadeIn(this.secondPageElementId);
+	//			}
+	//	}.bind(this));
 
 	}
 

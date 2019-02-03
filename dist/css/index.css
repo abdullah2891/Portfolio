@@ -418,8 +418,7 @@
     width: 200vw; }
 
 .third-page {
-  background-color: #eceaeb;
-  opacity: 0; }
+  background-color: #eceaeb; }
   .third-page .contact {
     padding: 30vh; }
     .third-page .contact .custom-input {
