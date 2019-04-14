@@ -19,8 +19,6 @@ export default class App extends Index{
 		this._set_element_position();
 	}
 
-
-
 	childViews(){
 		return [MainPage,Contact, ProjectDescription,SideFooter2,SideFooter];
 	}
@@ -39,6 +37,11 @@ export default class App extends Index{
 		});
 	}
 
+	/**
+	 * _handleScrolling
+	 *
+	 * @returns {undefined}
+	 */
 	_handleScrolling(){
 		//section position
 		
