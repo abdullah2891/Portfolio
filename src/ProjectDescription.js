@@ -66,10 +66,10 @@ export default class ProjectDescription extends Index{
 					const isEven = index % 2 ===0;
 					const row = `
 						<div id="${project.id}" class="row project-row" style="opacity:0">
-							<div class="col-md-${isEven ? '4': '8'}  image-container">
+							<div class="col-md-${isEven ? '5': '7'}  image-container">
 								${!isEven ? image(project) : project_description(project)}	
 							</div>
-							<div class="col-md-${isEven ? '8': '4'} image-container">
+							<div class="col-md-${isEven ? '7': '5'} image-container">
 								${isEven ? image(project) : project_description(project)}	
 							</div>
 						</div>

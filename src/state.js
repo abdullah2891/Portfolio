@@ -28,7 +28,7 @@ export  const state  =  {
 		title: "CHANGE MY VIEW READER",
 		description :"A REDDIT CLIENT MADE USING REACT NATIVE WHICH ALLOWS USER ADD POST AND PERFORM ACTION ON THE APP(AUTHENTICATED USING OAUTH2)",
 		skills: "REACT NATIVE , OAUTH2 , HEROKU",
-		link : "https://phandroid.s3.amazonaws.com/wp-content/uploads/2016/04/Boost-for-reddit-android.jpg",
+		link : "css/cmv.png",
 		show : false,
 		position : 626,
 		opacity: 0.05,
