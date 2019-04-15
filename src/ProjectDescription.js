@@ -53,6 +53,7 @@ export default class ProjectDescription extends Index{
 				<h3>${project.title}</h3>
 				<p>${project.description}</p>
 				<p>${project.skills}</p>
+				<p><a href="${project.url}" target="_blnk" style="color:white">Github</a></p>
 			`;
 		};
 
