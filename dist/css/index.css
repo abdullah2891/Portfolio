@@ -365,7 +365,7 @@
     background-color: #ffffff0f !important; }
 
 .first-page {
-  background: url("light-background.jpg") no-repeat;
+  background: url("circuitimage.svg") no-repeat;
   background-size: 100% auto;
   background-position: center;
   height: 100vh; }
@@ -373,7 +373,7 @@
     font-size: 30px;
     text-transform: uppercase;
     list-style: none;
-    padding-top: 10vh; }
+    padding-top: 70vh; }
   .first-page .navigation li:hover {
     border-bottom: 2px solid #F117B4;
     font-weight: thick;
@@ -386,7 +386,7 @@
     min-height: 100vh; }
     .first-page .main-page .introduction {
       text-transform: uppercase;
-      margin-top: 20vh; }
+      margin-top: 10vh; }
       .first-page .main-page .introduction .name-pad {
         background: #ffffffab;
         padding: 10px;

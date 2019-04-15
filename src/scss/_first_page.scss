@@ -1,6 +1,6 @@
 .first-page{
 
-	background: url('light-background.jpg') no-repeat;
+	background: url('circuitimage.svg') no-repeat;
 	background-size: 100% auto;
 	background-position: center;
 	height:100vh;	
@@ -10,7 +10,7 @@
 			font-size : 30px;
 			text-transform : uppercase;
 			list-style : none;	
-			padding-top : 10vh;
+			padding-top : 70vh;
 		}
 		li:hover{
 			border-bottom: 2px solid #F117B4;
@@ -29,7 +29,7 @@
 
 		.introduction{
 			text-transform : uppercase;
-			margin-top: 20vh;
+			margin-top: 10vh;
 			.name-pad{
 			 	background: #ffffffab;
 				padding: 10px;
